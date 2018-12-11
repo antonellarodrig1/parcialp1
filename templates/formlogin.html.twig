@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+  {% block container %}
+        <h1>Login</h1>
+
+<form method="POST" action="./?action=login">
+  <input type="text" placeholder="Usuario" name="usuario">
+  <input type="password" placeholder="Contraseña" name="clave">
+
+
+<button>Iniciar Sesion</button>
+    </form>
+  {% endblock %}

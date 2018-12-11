@@ -1,11 +1,6 @@
 <?php
 
 
-/**
- * Description of TwigView
- *
- * @author fede
- */
 require_once './vendor/autoload.php';
 
 abstract class TwigView {

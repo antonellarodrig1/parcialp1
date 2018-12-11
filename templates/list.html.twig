@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+{% set tareas = array["tareas"] %}
+
+
+  {% block container %}
+        <h1>Lista De Tareas</h1>
+<table>
+    <tr>
+       <th>Titulo </th>
+       <th> Categotia </th>
+       <th> Estado</th>
+    </tr>
+
+        {% for item in tareas %}
+          <tr>
+            <td>{{item.getTitulo}}</td>
+            <td>{{item.getCategoria}}</td>
+            <td>{{item.getEstado}}</td>
+            </tr>
+       {% endfor %}
+</table>
+
+  {% endblock %}

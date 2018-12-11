@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+{% set categorias = array["categorias"] %}
+
+  {% block container %}
+        <h1>Agregar Tarea</h1>
+
+<form method="POST" action="./?action=addt">
+  <input type="text" placeholder="Titulo" name="titulo">
+  <select name="categoria_id">
+
+  {% for item in categorias %}
+      <option value"{{item.getId}}">{{item.getNombre}}</option>
+  {% endfor %}
+
+  </select>
+
+
+<button>Agrregar</button>
+    </form>
+  {% endblock %}

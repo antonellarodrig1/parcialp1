@@ -1,12 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home</title>
-    </head>
-    <body>
+{% extends 'layout.html.twig' %}
+
+  {% block nav %}
         <h1>Home</h1>
         <ul>
-            <li><a href="./?action=listResources">Recursos</a></li>
+{% if auth %}
+          <li><a href="./?action=cerrarsesion">Cerrar Sesion</a></li>
+          <li><a href="./?action=listar">Listar</a></li>
+          <li><a href="./?action=formadd">Agregar Tarea</a></li>
+{% else %}
+          <li><a href="./?action=formlogin">Iniciar Sesion</a></li>
+{% endif %}
+
         </ul>
-    </body>
-</html>
+
+{% endblock %}
+{% block container %}
+
+{% for item in errors %}
+    {{item}}
+{% endfor %}
+{% endblock %}
